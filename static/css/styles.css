@@ -1,0 +1,135 @@
+/* Thank you ChatGPT */
+/* Body styling */
+body {
+  background-color: #2c2c2c;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* Main section styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+main h2 {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Link styling */
+a {
+  color: #F7931E;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+/* Button styling */
+button {
+  background-color: #F7931E;
+  border: none;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFF;
+  color: #F7931E;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Div arrangement */
+.all {
+    display: flex;
+}
+
+.me {
+    order: 1;
+    width: 15%;
+    margin-left: 5%;
+}
+
+.interests {
+    order: 2;
+    width: 15%;
+    margin-left: 1%;
+    border: 1px solid red;
+    padding: 5pt;
+}
+
+.mywork {
+    order: 3;
+    width: 20%;
+    margin-left: 1%;
+}
+
+.games {
+    order: 5;
+    width: 15%;
+    margin-left: 1%;
+}
+
+.articles {
+    order: 4;
+    width: 15%;
+    margin-left: 1%;
+    border: 1px solid red;
+    padding: 5pt;
+}
