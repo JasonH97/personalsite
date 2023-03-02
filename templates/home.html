@@ -5,11 +5,9 @@
     <div class="me">
         <h1>Jason's Site</h1>
         <h3>Quotes I Like</h3>
-        <p>"Let this always be the aim of your conduct: to be courteous and respectful to all." - <b>St. Isaac the Syrian</b></p>
-        <p>"If we ourselves do not learn humility, God will not stop humbling us" - <b>Elder Thaddeus of Vitovnica</b></p>
-        <p>"...know who you are in truth, and not who you imagine you are. With this knowledge you become the wisest man." - <b>Elder Joseph the Hesychast</b></p>
-        <p>"...obedience is the highest virtue; yet it is also the most basic and the most foundational for all spiritual endeavor." - <b>Bishop Irenei Steenberg</b></p>
-        <p></p>
+        {% for quote in quotes %}
+        <p>{{ quote.content }} - <b>{{ quote.author }}</b></p>
+        {% endfor %}
     </div>
 
     <div class="interests">
@@ -23,8 +21,9 @@
         </ul>
         <h2>My Book List</h2>
         <ul>
-            <li><a href="https://www.goodreads.com/en/book/show/3735293">(<b>Currently Reading</b>) Clean Code - Robert Cecil Martin</a></li>
-            <li><a href="https://www.goodreads.com/en/book/show/56325916">(<b>Wishlist</b>) Two Paths: Orthodoxy & Catholicism</a></li>
+            {% for book in books %}
+            <li><a href={{ book.link }}>{{ book.name }} - {{ book.author }}</a></li>
+            {% endfor %}
         </ul>
     </div>
 
@@ -44,35 +43,18 @@
     <div class="games">
         <h3>Some of my Favorite Games</h3>
         <ul>
-            <li>Battlefield 3 & 4 (PC)</li>
-            <li>Command and Conquer 3 (PC)</li>
-            <li>Crash Bandicoot 2: Cortex Strikes Back (PSX)</li>
-            <li>Crash Team Racing (PSX)</li>
-            <li>F-Zero GX (GC)</li>
-            <li>Final Fantasy XII (PS2)</li>
-            <li>Metal Gear Solid 4: Guns of the Patriots (PS3)</li>
-            <li>Pokemon: Emerald Version (GBA)</li>
-            <li>Spyro 2: Ripto's Rage (PSX)</li>
-            <li>The Elder Scrolls V: Skyrim (PC)</li>
-            <li>The Legend of Zelda: A Link to the Past (SNES)</li>
-            <li>Yakuza 0 (PC)</li>
+            {% for game in games %}
+            <li>{{ game.title }}, (<b>{{ game.platform }}</b>)</li>
+            {% endfor %}
         </ul>
     </div>
 
     <div class="articles">
         <h2>Ideas for Articles</h2>
         <ul>
-            <li>Removing All Social Media and Embracing RSS</li>
-            <li>Ditching My Mouse and Adopting a 99% Keyboard-Driven Workflow</li>
-            <li>Writing Highly-Customized Configs for
-                <i><a href="https://www.gnu.org/software/bash/">bash</a></i>,
-                <i><a href="https://neovim.io/">neovim</a></i>, and
-                <i><a href="https://github.com/qutebrowser/qutebrowser">qutebrowser</a></i></li>
-            <li>Podcasts, Warframe, and The Price is Right</li>
-            <li>Getting Into <a href="https://geti2p.net/en/">i2p</a> and Why You Should too</li>
-            <li>Why I Choose Free/Libre Software</li>
-            <li>Living Without Google</li>
-            <li>How I Made my Browser (and Anything Else I Want) Transparent</li>
+            {% for article in articles %}
+            <li>{{ article }}</li>
+            {% endfor %}
         </ul>
     </div>
 
